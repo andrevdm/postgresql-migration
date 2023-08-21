@@ -2,6 +2,7 @@
 
 ## Unreleased
 * Switch from deprecated cryptohash dependency to cryptohash-md5 
+* Relaxed version bounds for postgresql-simple to include 0.7
 
 ## 0.2.1.0
  * Forked & renamed to postgresql-migration

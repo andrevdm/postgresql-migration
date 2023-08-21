@@ -62,7 +62,7 @@ library
                         , cryptohash-md5              >= 0.11     && < 0.12
                         , directory                   >= 1.2      && < 1.4
                         , filepath                    >= 1.4.1.0  && < 1.5
-                        , postgresql-simple           >= 0.4      && < 0.7
+                        , postgresql-simple           >= 0.4      && < 0.8
                         , time                        >= 1.4      && < 1.13
                         , text                        >= 1.2      && < 2.1
 
@@ -75,7 +75,7 @@ executable migrate
   hs-source-dirs:         app
   build-depends:          postgresql-migration
                         , bytestring                  >= 0.10     && < 0.12
-                        , postgresql-simple           >= 0.4      && < 0.7
+                        , postgresql-simple           >= 0.4      && < 0.8
                         , text                        >= 1.2      && < 2.1
 
 test-suite tests
@@ -88,5 +88,5 @@ test-suite tests
                         , Database.PostgreSQL.Simple.TransactionPerStepTest
   type:                   exitcode-stdio-1.0
   build-depends:          postgresql-migration
-                        , postgresql-simple           >= 0.4      && < 0.7
+                        , postgresql-simple           >= 0.4      && < 0.8
                         , hspec                       >= 2.2      && < 2.12
