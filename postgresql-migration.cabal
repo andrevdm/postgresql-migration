@@ -1,6 +1,6 @@
 cabal-version:              3.0
 name:                       postgresql-migration
-version:                    0.2.1.7
+version:                    0.2.1.8
 synopsis:                   PostgreSQL Schema Migrations
 homepage:                   https://github.com/andrevdm/postgresql-migration
 Bug-reports:                https://github.com/andrevdm/postgresql-migration/issues
@@ -18,6 +18,7 @@ tested-with:                GHC==9.6.1
                             GHC==9.0.2
                             GHC==8.8.4
                             GHC==8.6.5
+                            GHC==9.8.2
 extra-doc-files:            Readme.markdown
                             Changelog.markdown
 extra-source-files:         share/test/*.sql
