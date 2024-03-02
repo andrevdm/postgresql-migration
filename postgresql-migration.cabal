@@ -42,7 +42,7 @@ common common-options
                -Wpartial-fields
                -fhide-source-paths
                -freverse-errors
-  
+
   if impl(ghc >= 8.8.1)
     ghc-options: -fwrite-ide-info -hiedir=.hie
 
@@ -57,14 +57,15 @@ library
   other-modules:          Paths_postgresql_migration
   autogen-modules:        Paths_postgresql_migration
   hs-source-dirs:         src
-  build-depends:          base64-bytestring           >= 1.0      && < 1.3
-                        , bytestring                  >= 0.10     && < 0.12
+  build-depends:          base                        >= 4.9      && < 5.0
+                        , base64-bytestring           >= 1.0      && < 1.3
+                        , bytestring                  >= 0.10     && < 0.13
                         , cryptohash-md5              >= 0.11     && < 0.12
                         , directory                   >= 1.2      && < 1.4
-                        , filepath                    >= 1.4.1.0  && < 1.5
+                        , filepath                    >= 1.4.1.0  && < 1.6
                         , postgresql-simple           >= 0.4      && < 0.8
                         , time                        >= 1.4      && < 1.13
-                        , text                        >= 1.2      && < 2.1
+                        , text                        >= 1.2      && < 2.2
 
 executable migrate
   import:                 common-options
@@ -74,9 +75,10 @@ executable migrate
   autogen-modules:        Paths_postgresql_migration
   hs-source-dirs:         app
   build-depends:          postgresql-migration
-                        , bytestring                  >= 0.10     && < 0.12
+                        , base                        >= 4.9      && < 5.0
+                        , bytestring                  >= 0.10     && < 0.13
                         , postgresql-simple           >= 0.4      && < 0.8
-                        , text                        >= 1.2      && < 2.1
+                        , text                        >= 1.2      && < 2.2
 
 test-suite tests
   import:                 common-options
@@ -88,5 +90,7 @@ test-suite tests
                         , Database.PostgreSQL.Simple.TransactionPerStepTest
   type:                   exitcode-stdio-1.0
   build-depends:          postgresql-migration
+                        , base                        >= 4.9      && < 5.0
                         , postgresql-simple           >= 0.4      && < 0.8
                         , hspec                       >= 2.2      && < 2.12
+                        , bytestring                  >= 0.10     && < 0.13
