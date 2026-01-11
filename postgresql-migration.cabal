@@ -65,7 +65,7 @@ library
                         , directory                   >= 1.2      && < 1.4
                         , filepath                    >= 1.4.1.0  && < 1.6
                         , postgresql-simple           >= 0.4      && < 0.8
-                        , time                        >= 1.4      && < 1.13
+                        , time                        >= 1.4      && < 1.16
                         , text                        >= 1.2      && < 2.2
 
 executable migrate
